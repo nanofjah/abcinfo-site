@@ -80,12 +80,26 @@ function envoyerForm(e) {
   btn.textContent = 'Envoi en cours…';
   btn.disabled = true;
 
-  // Simulation envoi (à remplacer par fetch vers un endpoint réel)
-  setTimeout(() => {
-    form.reset();
-    btn.style.display = 'none';
-    success.style.display = 'block';
-  }, 1200);
+  const data = new FormData(form);
+
+  fetch('/contact.php', { method: 'POST', body: data })
+    .then(r => r.json())
+    .then(res => {
+      if (res.ok) {
+        form.reset();
+        btn.style.display = 'none';
+        success.style.display = 'block';
+      } else {
+        btn.textContent = 'Réessayer';
+        btn.disabled = false;
+        alert('Erreur : ' + (res.error || 'envoi impossible'));
+      }
+    })
+    .catch(() => {
+      btn.textContent = 'Réessayer';
+      btn.disabled = false;
+      alert('Erreur réseau, veuillez réessayer.');
+    });
 }
 
 
