@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /ancien/
+Disallow: /contact.php
+
+Sitemap: https://www.abcinfo.ch/sitemap.xml
