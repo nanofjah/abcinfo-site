@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eric Miermon Informatique — Support & Développement | Genève</title>
+  <meta name="description" content="Informaticien indépendant à Genève. Support, maintenance, dépannage PC/Mac, développement d'applications web et mobile sur mesure. Devis gratuit.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&family=VT323&family=Share+Tech+Mono&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=95">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════════════════════ -->
+<header id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <span class="logo-terminal" aria-label="abcinfo.ch">
+        <span class="logo-prompt">&#62;_</span><span class="logo-name">abcinfo</span><span class="logo-cursor" aria-hidden="true">▌</span>
+      </span>
+      <span class="logo-tagline" data-i18n="logo-tagline">Service en informatique</span>
+    </a>
+    <div class="lang-bar">
+      <button id="btnFr" onclick="setLang('fr')" style="color:#ffffff;border-color:#ffffff;">FR</button>
+      <button id="btnEn" onclick="setLang('en')" style="color:rgba(255,255,255,0.4);border-color:rgba(255,255,255,0.2);">EN</button>
+    </div>
+    <nav class="nav-links">
+      <a href="#support" data-i18n="nav-support">Support</a>
+      <a href="#dev" data-i18n="nav-dev">Développement</a>
+      <a href="#apropos" data-i18n="nav-apropos">À propos</a>
+      <a href="#contact" class="nav-contact" data-i18n="nav-contact">&gt;_ Contact</a>
+    </nav>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="#support" onclick="closeMobile()">Support & Maintenance</a>
+    <a href="#dev" onclick="closeMobile()">Développement & Apps</a>
+    <a href="#apropos" onclick="closeMobile()">À propos</a>
+    <a href="#contact" onclick="closeMobile()">Contact</a>
+  </div>
+</header>
+<div class="theme-bar" id="themeBar">
+  <button class="theme-btn" id="btn80" onclick="setTheme('80')" data-i18n="btn80">Années 80</button>
+  <button class="theme-btn" id="btn90" onclick="setTheme('90')" data-i18n="btn90">Années 90</button>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1920&q=80')"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge reveal"><span class="retro-prefix">$</span> <strong data-i18n="hero-badge">DEPUIS 25 ANS</strong></div>
+    <h1 id="hero-title" data-i18n-aria="hero-title-aria" aria-label="Votre partenaire informatique à Genève"></h1>
+    <p class="hero-sub reveal" data-i18n="hero-sub">Support &amp; maintenance pour particuliers et entreprises.<br>Développement d'applications web et mobile sur mesure.</p>
+    <div class="hero-ctas reveal">
+      <a href="#contact" class="btn-term-primary" data-i18n="hero-cta1">[ DEVIS GRATUIT ]</a>
+      <a href="#axes" class="btn-term-ghost" data-i18n="hero-cta2">&gt;_ DÉCOUVRIR</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     LES 2 AXES
+═══════════════════════════════════════════════════════════ -->
+<section id="axes">
+  <canvas class="matrix-canvas" data-theme="dark" aria-hidden="true"></canvas>
+  <div class="container">
+    <div class="section-label reveal"><span class="retro-prefix">&gt;_</span> <span data-i18n="axes-label">Deux expertises, un seul interlocuteur</span></div>
+    <div class="axes-grid">
+      <a href="#support" class="axe-card axe-support reveal">
+        <div class="axe-accent axe-accent-blue"></div>
+        <div class="axe-cmd-block" aria-hidden="true">
+          <div class="axe-cmd-bar">
+            <span class="cmd-win">⊞</span>
+            <span class="cmd-title" data-i18n="cmd-title">Invite de commandes</span>
+            <span class="cmd-btns"><span>─</span><span>□</span><span>✕</span></span>
+          </div>
+          <pre class="axe-cmd-pre">C:\&gt; <span class="cmd-hl">diagnose</span> --scan
+Checking system... <span class="cmd-ok">OK</span>
+Issues found : <span class="cmd-warn">3</span>
+Applying fixes<span class="cmd-blink">_</span>
+Status : <span class="cmd-ok">RESOLVED</span></pre>
+        </div>
+        <h3>Support &amp; Maintenance</h3>
+        <p data-i18n="axes-support-p">Dépannage, maintenance préventive, conseil et formation pour vos équipements PC &amp; Mac.</p>
+        <span class="axe-link axe-link-blue" data-i18n="axes-support-lnk">En savoir plus →</span>
+      </a>
+      <a href="#dev" class="axe-card axe-dev reveal">
+        <div class="axe-accent axe-accent-green"></div>
+        <div class="axe-code-block" aria-hidden="true">
+          <div class="axe-code-bar"><span></span><span></span><span></span></div>
+          <pre class="axe-code-pre"><span class="py-kw">def</span> <span class="py-fn">build_app</span>(client):
+    app = <span class="py-fn">App</span>(client.idea)
+    app.<span class="py-fn">deploy</span>()
+    <span class="py-kw">return</span> <span class="py-str">"✓ En ligne"</span></pre>
+        </div>
+        <h3>Développement &amp; Applications</h3>
+        <p data-i18n="axes-dev-p">Sites web, applications métier, apps mobiles — conçus sur mesure pour vos besoins.</p>
+        <span class="axe-link axe-link-green" data-i18n="axes-dev-lnk">En savoir plus →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SUPPORT & MAINTENANCE
+═══════════════════════════════════════════════════════════ -->
+<section id="support" class="section-alt">
+  <canvas class="matrix-canvas" data-theme="light" aria-hidden="true"></canvas>
+  <div class="container section-split">
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div class="split-img reveal" style="aspect-ratio:2/3;border-radius:16px;">
+        <img src="img/serveur-support.png"
+             alt="Serveur informatique" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+      </div>
+      <p style="font-family:var(--font-mono);font-size:0.62rem;color:rgb(100,116,139);text-align:center;letter-spacing:0.04em;" data-i18n="img-caption">image générée par Google Nano Banana 2</p>
+    </div>
+    <div class="split-content reveal">
+      <h2 data-i18n="support-h2">Support &amp; Maintenance</h2>
+      <p class="lead" data-i18n="support-lead">Particuliers, petites entreprises, professions libérales, Abc info est là pour vous aider au quotidien dans l'utilisation de votre outil informatique. Devis détaillés et gratuits, prestations garanties. Nous vous offrons un service de proximité efficace et bon marché.</p>
+      <ul class="service-list">
+        <li><span class="sl-icon"></span><div data-i18n="support-s1"><strong>Dépannage</strong><br><em>AbcInfo</em> intervient au plus vite pour dépanner et configurer vos systèmes informatiques (PC, Mac, Smartphone, Serveurs, etc).<br><span class="sl-sub">Devis gratuit · Facturé à la prestation · Tarifs transparents</span></div></li>
+        <li><span class="sl-icon"></span><div data-i18n="support-s2"><strong>Maintenance</strong><br><em>AbcInfo</em> propose des formules personnalisées pour gérer vos besoins informatiques au quotidien.<br><span class="sl-sub">Support interactif · Délais garantis · Suivi personnalisé</span></div></li>
+        <li><span class="sl-icon"></span><div data-i18n="support-s3"><strong>Déploiement</strong><br>Nouveau bureau, restructuration de parc informatique, migration vers le cloud : <em>AbcInfo</em> prend en charge l'intégralité de votre projet, de l'étude des besoins à la mise en service complète.<br><span class="sl-sub">Câblage réseau · Postes de travail · Serveurs · NAS · Imprimantes · Téléphonie · Accès internet · Sauvegardes · Documentation</span></div></li>
+        <li><span class="sl-icon"></span><div data-i18n="support-s4"><strong>Conseil</strong><br><em>AbcInfo</em> vous apporte son expertise pour prendre les bonnes décisions.<br><span class="sl-sub">Définition des besoins · Conduite au changement (matériel &amp; logiciel) · Intégration de progiciels · Administration réseau · etc.</span></div></li>
+        <li class="sl-right"><span class="sl-icon"></span><div data-i18n="support-s5"><strong>Sécurité</strong><br>La sécurité numérique : la problématique technique de l'entreprise. Nous vous aidons à mettre en place des procédures efficaces et à sensibiliser le personnel à cette problématique.</div></li>
+        <li class="sl-right"><span class="sl-icon"></span><div data-i18n="support-s6"><strong>Intelligence artificielle</strong><br><em>AbcInfo</em> intègre les outils IA les plus récents dans vos workflows pour gagner en efficacité. Automatisation, traitement de documents, assistants métier — l'IA au service de votre activité, sans jargon.<br><span class="sl-sub">Claude API · LLM · RAG · Agents IA · Automatisation · Intégration sur mesure</span></div></li>
+        <li class="sl-right"><span class="sl-icon"></span><div data-i18n="support-s7"><strong>Réseaux</strong><br>Configuration de réseaux (LAN, WAN, VLAN), Wi-Fi, firewall, NAT (translation d'adresse), routage statique, Linux / Nginx.</div></li>
+        <li class="sl-right"><span class="sl-icon"></span><div data-i18n="support-s8"><strong>Téléphonie</strong><br>Mise en place de centraux téléphoniques virtuels indépendants des opérateurs suisses.<br><span class="sl-sub">Téléphonie SIP · Linux · Asterisk · FreePBX · Mise en place de Trunks · Numéros DID · QoS voix · Softphones</span></div></li>
+      </ul>
+      <a href="#contact" class="btn btn-blue" data-i18n="support-btn">Demander une intervention</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     DÉVELOPPEMENT & APPS
+═══════════════════════════════════════════════════════════ -->
+<section id="dev" class="section-alt">
+  <canvas class="matrix-canvas" data-theme="dark" aria-hidden="true"></canvas>
+  <div class="container section-split">
+    <div class="split-content reveal">
+      <h2 data-i18n="dev-h2">Développement &amp; Applications</h2>
+      <p class="lead" data-i18n="dev-lead"><em>AbcInfo</em> vous aide à concevoir et réaliser vos projets numériques : que ce soit sous forme de site web statique ou dynamique, d'application web métier ou d'app pour smartphone, nous intervenons sur toutes les phases du cycle de développement de votre projet.</p>
+      <ul class="service-list">
+        <li><span class="sl-icon"></span><div data-i18n="dev-s1"><strong>Conception et spécifications fonctionnelles</strong><br>La réussite d'un projet numérique se joue dans la compréhension fine des besoins et des processus métiers. <em>AbcInfo</em> vous fait bénéficier de son expertise dans ce domaine.</div></li>
+        <li><span class="sl-icon"></span><div data-i18n="dev-s2"><strong>Réalisation et développement</strong><br><em>AbcInfo</em> code vos projets dans des technologies modernes et pérennes.</div></li>
+        <li><span class="sl-icon"></span><div data-i18n="dev-s3"><strong>Tests de validation et d'intégration</strong><br><em>AbcInfo</em> effectue des batteries de tests automatisés pour valider fonctionnellement chaque outil développé. Des tests d'intégration sont également réalisés lors du raccordement au système d'information client, afin de minimiser les dysfonctionnements et les problèmes de compatibilité entre systèmes hétérogènes.</div></li>
+        <li><span class="sl-icon"></span><div data-i18n="dev-s4"><strong>Livraison, intégration et documentation</strong><br><em>AbcInfo</em> vous livre l'outil réalisé et l'intègre dans votre système d'information. Une documentation complète vous est fournie, détaillant les flux de données et les processus associés.</div></li>
+        <li><span class="sl-icon"></span><div data-i18n="dev-s5"><strong>Garantie et suivi</strong><br><em>AbcInfo</em> vous offre 3 mois de garantie totale sur l'outil livré, couvrant les vices cachés et les bogues techniques qui n'auraient pas été détectés en amont.</div></li>
+        <li class="sl-right"><span class="sl-icon"></span><div data-i18n="dev-s6"><strong>Sites web modernes</strong><br>Sites vitrines, e-commerce, responsive, rapides et bien référencés.</div></li>
+        <li class="sl-right"><span class="sl-icon"></span><div data-i18n="dev-s7"><strong>Applications web métier</strong><br>Back-office, CRM, portails clients, gestion sur mesure.</div></li>
+        <li class="sl-right"><span class="sl-icon"></span><div data-i18n="dev-s8"><strong>Applications mobiles</strong><br>Apps iOS &amp; Android natives (disponibles via les stores dédiés) ou PWA (Progressive Web App) pour une expérience app sans les obligations Google ou Apple.</div></li>
+        <li class="sl-right"><span class="sl-icon"></span><div data-i18n="dev-s9"><strong>APIs &amp; intégrations</strong><br>Connexion de vos outils à des flux de données externes, automatisation de processus métiers. (Ex : flux financiers Bloomberg, intégration messagerie Telegram, flux données assurances IGB2B.)</div></li>
+        <li class="sl-right"><span class="sl-icon"></span><div data-i18n="dev-s10"><strong>Intelligence artificielle</strong><br>Intégration d'IA dans vos workflows (Claude API, LLM, RAG).</div></li>
+        <li class="sl-right"><span class="sl-icon"></span><div data-i18n="dev-s11"><strong>Administration &amp; maintenance</strong><br><em>AbcInfo</em> peut gérer pour vous l'hébergement de vos outils et en assurer la maintenance.</div></li>
+      </ul>
+      <a href="#contact" class="btn btn-green" data-i18n="dev-btn">Discuter de votre projet</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div class="split-img reveal" style="aspect-ratio:2/3;border-radius:16px;">
+        <img src="img/plandev.png"
+             alt="Plan de développement" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+      </div>
+      <p style="font-family:var(--font-mono);font-size:0.62rem;color:rgb(148,163,184);text-align:center;letter-spacing:0.04em;" data-i18n="img-caption">image générée par Google Nano Banana 2</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     STATS / RÉASSURANCE
+═══════════════════════════════════════════════════════════ -->
+<section id="stats" class="section-dark">
+  <canvas class="matrix-canvas" data-theme="dark" aria-hidden="true"></canvas>
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-num">25+</div>
+        <div class="stat-label" data-i18n="stat-1-label">années d'expérience</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-num">GE · VD</div>
+        <div class="stat-label" data-i18n="stat-2-label">zone d'intervention + remote</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-num">08h</div>
+        <div class="stat-label" data-i18n="stat-3-label">délai d'intervention garanti *</div>
+        <div class="stat-note" data-i18n="stat-3-note">* selon contrat</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-num">100%</div>
+        <div class="stat-label" data-i18n="stat-4-label">indépendant — devis gratuit</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     À PROPOS
+═══════════════════════════════════════════════════════════ -->
+<section id="apropos" class="section-alt">
+  <canvas class="matrix-canvas" data-theme="light" aria-hidden="true"></canvas>
+  <div class="container section-split">
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div class="split-img reveal" style="aspect-ratio:2/3;border-radius:16px;">
+        <img src="img/independant.png?v=5"
+             alt="Indépendant depuis 25 ans" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 0%;">
+      </div>
+      <p style="font-family:var(--font-mono);font-size:0.62rem;color:rgb(71,85,105);text-align:center;letter-spacing:0.04em;" data-i18n="img-caption">image générée par Google Nano Banana 2</p>
+    </div>
+    <div class="split-content reveal">
+      <h2 data-i18n="apropos-h2">Indépendant depuis 25 ans.</h2>
+      <p class="lead" data-i18n="apropos-lead">Une seule et unique dépendance : la satisfaction de nos clients.</p>
+      <div class="apropos-points">
+        <div class="ap-item">
+          <div class="ap-icon ap-icon-term">#0x00</div>
+          <div data-i18n="apropos-p1"><strong>Toujours à l'écoute</strong><br><em>AbcInfo</em> évalue le degré d'urgence de chaque demande et met tout en œuvre pour intervenir au plus vite — pannes, blocages, impossibilité de travailler : la réactivité est notre priorité.</div>
+        </div>
+        <div class="ap-item">
+          <div class="ap-icon ap-icon-term">#0x01</div>
+          <div data-i18n="apropos-p2"><strong>Pas de partenariat revendeur</strong><br>Au fil des années, <em>AbcInfo</em> n'a noué aucun partenariat commercial avec quelque enseigne que ce soit (Apple, Microsoft, Swisscom…). Nos choix sont dictés par la technique et le besoin effectif de nos clients.</div>
+        </div>
+        <div class="ap-item">
+          <div class="ap-icon ap-icon-term">#0x02</div>
+          <div data-i18n="apropos-p3"><strong>Lien personnalisé</strong><br>Vous parlez directement à la personne qui fait le travail — pas à un commercial, pas à un chef de projet.</div>
+        </div>
+        <div class="ap-item">
+          <div class="ap-icon ap-icon-term">#0x03</div>
+          <div data-i18n="apropos-p4"><strong>Qualité de service</strong><br><em>AbcInfo</em> accompagne nombre de ses clients depuis des années, et certains depuis plus de 20 ans : un système qui fonctionne !</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TECHNOLOGIES
+═══════════════════════════════════════════════════════════ -->
+<section id="tech" class="section-alt">
+  <canvas class="matrix-canvas" data-theme="dark" aria-hidden="true"></canvas>
+  <div class="container">
+    <div class="section-label reveal"><span class="retro-prefix">&gt;_</span> <span data-i18n="tech-label">Technologies</span></div>
+    <h2 class="section-title reveal" data-i18n="tech-title">Stack moderne, choix adaptés</h2>
+    <div class="tech-grid reveal" style="margin-top:56px;">
+      <div class="tech-pill"><img src="https://cdn.simpleicons.org/python" class="tech-logo" alt="">Python / Django</div>
+      <div class="tech-pill"><img src="https://cdn.simpleicons.org/vuedotjs" class="tech-logo" alt="">Vue.js / React</div>
+      <div class="tech-pill"><img src="https://cdn.simpleicons.org/flutter" class="tech-logo" alt="">Flutter / Dart</div>
+      <div class="tech-pill"><img src="https://cdn.simpleicons.org/postgresql" class="tech-logo" alt="">PostgreSQL</div>
+      <div class="tech-pill"><img src="https://cdn.simpleicons.org/docker" class="tech-logo" alt="">Docker</div>
+      <div class="tech-pill"><img src="https://cdn.simpleicons.org/linux" class="tech-logo" alt="">Linux / Nginx</div>
+      <div class="tech-pill"><svg class="tech-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z" fill="#CC785C"/></svg>Claude API / LLM</div>
+      <div class="tech-pill"><img src="https://cdn.simpleicons.org/git" class="tech-logo" alt="">Git / CI-CD</div>
+      <div class="tech-pill"><img src="https://cdn.simpleicons.org/wordpress" class="tech-logo" alt="">WordPress</div>
+      <div class="tech-pill"><svg class="tech-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701" fill="#888888"/></svg>macOS / iOS</div>
+      <div class="tech-pill"><svg class="tech-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-13.051-1.801" fill="#0078D4"/></svg>MS Windows</div>
+      <div class="tech-pill"><img src="https://cdn.simpleicons.org/vmware" class="tech-logo" alt="">VMware</div>
+      <div class="tech-pill"><img src="https://cdn.simpleicons.org/teamviewer" class="tech-logo" alt="">TeamViewer</div>
+      <div class="tech-pill"><img src="https://cdn.simpleicons.org/asterisk" class="tech-logo" alt="">Asterisk / FreePBX</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CONTACT
+═══════════════════════════════════════════════════════════ -->
+<section id="contact" class="section-alt">
+  <canvas class="matrix-canvas" data-theme="light" aria-hidden="true"></canvas>
+  <div class="container">
+    <h2 class="section-title reveal" data-i18n="contact-title" style="text-align:left; font-family:var(--font-mono); font-size:clamp(1.6rem,3vw,2.2rem); font-weight:400; letter-spacing:0.02em;">Parlons de vos projets</h2>
+    <div class="contact-grid">
+      <!-- Infos + Carte de visite -->
+      <div class="contact-info reveal">
+        <div class="ci-terminal">
+          <div class="ci-bar"><span class="ci-dot"></span><span class="ci-dot"></span><span class="ci-dot"></span><span class="ci-bartitle" data-i18n="ci-bartitle">abcinfo.ch — contact</span></div>
+          <div class="ci-body">
+            <div class="ci-line"><span class="ci-key" data-i18n="ci-loc"># localisation</span></div>
+            <div class="ci-line"><span class="ci-pfx">&gt;</span> Carouge, Genève (CH)</div>
+            <div class="ci-line ci-spacer"></div>
+            <div class="ci-line"><span class="ci-key" data-i18n="ci-tel"># téléphone</span></div>
+            <div class="ci-line"><span class="ci-pfx">&gt;</span> <a href="tel:+41223205600">+41 (0)22 320 56 00</a></div>
+            <div class="ci-line ci-spacer"></div>
+            <div class="ci-line"><span class="ci-key" data-i18n="ci-email"># e-mail</span></div>
+            <div class="ci-line"><span class="ci-pfx">&gt;</span> <a href="mailto:contact@abcinfo.ch">contact@abcinfo.ch</a></div>
+            <div class="ci-line ci-spacer"></div>
+            <div class="ci-line"><span class="ci-key" data-i18n="ci-dispo"># disponibilité</span></div>
+            <div class="ci-line"><span class="ci-pfx">&gt;</span> <span data-i18n="ci-dispo-1">Lun–Ven 8h–18h</span></div>
+            <div class="ci-line"><span class="ci-pfx">&gt;</span> <span data-i18n="ci-dispo-2">Urgences sur arrangement</span></div>
+            <div class="ci-line ci-spacer"></div>
+            <div class="ci-line"><span class="ci-key" data-i18n="ci-zone"># zone d'intervention</span></div>
+            <div class="ci-line"><span class="ci-pfx">&gt;</span> <span data-i18n="ci-zone-1">Genève · Vaud · France voisine</span></div>
+            <div class="ci-line"><span class="ci-pfx">&gt;</span> <span data-i18n="ci-zone-2">Support à distance (partout)</span></div>
+          </div>
+        </div>
+
+        <!-- Carte de visite -->
+        <div class="carte-wrapper">
+          <div class="carte-visite" id="carteVisite">
+            <div class="cv-left">
+              <div class="cv-brand">
+                <div class="cv-logo"><span class="cv-prompt">&gt;_</span><span class="cv-logo-name">abcinfo</span></div>
+                <div class="cv-tagline" data-i18n="logo-tagline">Service en informatique</div>
+              </div>
+              <div class="cv-name">Eric Miermon</div>
+              <div class="cv-title" data-i18n="cv-title">Ingénieur diplômé EPITA Paris</div>
+              <div class="cv-title cv-title-sub" data-i18n="cv-subtitle">Génie logiciel &amp; systèmes d'informations</div>
+              <div class="cv-sep"></div>
+              <div class="cv-detail"><span class="cv-pfx">$</span> +41 (0)22 320 56 00</div>
+              <div class="cv-detail"><span class="cv-pfx">@</span> <a href="mailto:eric@abcinfo.ch">eric@abcinfo.ch</a></div>
+              <div class="cv-detail"><span class="cv-pfx">&gt;</span> www.abcinfo.ch</div>
+              <div class="cv-detail"><span class="cv-pfx">#</span> Carouge, Genève</div>
+            </div>
+            <div class="cv-right">
+              <img class="cv-qr"
+                src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=https%3A%2F%2Fwww.abcinfo.ch%2Feric-miermon-abcinfo.vcf"
+                alt="QR Code vCard Eric Miermon">
+              <div class="cv-qr-label" style="display:none;"></div>
+            </div>
+          </div>
+          <div class="cv-footer">
+            <button class="btn btn-dl" onclick="telechargerVCard()" data-i18n="vcard-btn">Ajouter au carnet d'adresses</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulaire -->
+      <div class="contact-form-wrap reveal">
+        <span class="form-wrap-bar" data-i18n="form-bar">&gt;_ formulaire de contact</span>
+        <form class="contact-form" id="contactForm" onsubmit="envoyerForm(event)">
+          <div class="form-group">
+            <label data-i18n="form-societe">Société</label>
+            <input type="text" name="societe" data-i18n-ph="form-societe-ph" placeholder="Nom de votre entreprise">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label data-i18n="form-prenom">Prénom *</label>
+              <input type="text" name="prenom" required data-i18n-ph="form-prenom-ph" placeholder="Jean">
+            </div>
+            <div class="form-group">
+              <label data-i18n="form-nom">Nom *</label>
+              <input type="text" name="nom" required data-i18n-ph="form-nom-ph" placeholder="Dupont">
+            </div>
+          </div>
+          <div class="form-group">
+            <label data-i18n="form-email-lbl">E-mail *</label>
+            <input type="email" name="email" required placeholder="jean.dupont@example.com">
+          </div>
+          <div class="form-group">
+            <label data-i18n="form-tel-lbl">Téléphone</label>
+            <input type="tel" name="telephone" data-i18n-ph="form-tel-ph" placeholder="+41 79 000 00 00">
+          </div>
+          <div class="form-group">
+            <label data-i18n="form-sujet">Sujet *</label>
+            <select name="sujet" required>
+              <option value="" data-i18n="form-opt-0">— Choisissez —</option>
+              <option value="support" data-i18n="form-opt-1">Support &amp; Dépannage</option>
+              <option value="maintenance" data-i18n="form-opt-2">Maintenance &amp; Contrat</option>
+              <option value="site-web" data-i18n="form-opt-3">Création de site web</option>
+              <option value="app-web" data-i18n="form-opt-4">Application web sur mesure</option>
+              <option value="app-mobile" data-i18n="form-opt-5">Application mobile</option>
+              <option value="autre" data-i18n="form-opt-6">Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label data-i18n="form-msg-lbl">Message *</label>
+            <textarea name="message" required rows="3" data-i18n-ph="form-msg-ph" placeholder="Décrivez votre besoin..."></textarea>
+          </div>
+          <div class="form-note" data-i18n="form-required">* champs obligatoire</div>
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn" data-i18n="form-submit">
+            Envoyer le message
+          </button>
+          <div class="form-success" id="formSuccess" data-i18n="form-success">
+            ✓ Message envoyé ! Je vous réponds dans les 24–48h.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════ -->
+<footer style="position:relative;overflow:hidden;">
+  <canvas class="matrix-canvas" data-theme="dark" aria-hidden="true"></canvas>
+  <div class="footer-inner container">
+    <div class="footer-brand">
+      <div class="nav-logo" style="font-size:1.5rem;">
+        <svg class="logo-mark" width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#2563eb"/><text x="16" y="22" font-family="'Plus Jakarta Sans',sans-serif" font-size="13" font-weight="800" fill="white" text-anchor="middle" letter-spacing="-0.5">AI</text></svg>
+        <span class="logo-wordmark"><span class="logo-abc">abcinfo</span><span class="logo-tld">.ch</span></span>
+      </div>
+      <p data-i18n="footer-desc"><em>AbcInfo</em> — service en informatique<br>conseil, support et développement</p>
+    </div>
+    <div class="footer-links">
+      <strong data-i18n="footer-svc">Services</strong>
+      <a href="#support">Support &amp; Maintenance</a>
+      <a href="#dev" data-i18n="footer-svc-2">Développement Web</a>
+      <a href="#dev" data-i18n="footer-svc-3">Applications Mobiles</a>
+      <a href="#tech" data-i18n="footer-svc-4">Technologies</a>
+    </div>
+    <div class="footer-links">
+      <strong data-i18n="footer-contact">Contact</strong>
+      <a href="tel:+41223205600">+41 (0)22 320 56 00</a>
+      <a href="mailto:contact@abcinfo.ch">contact@abcinfo.ch</a>
+      <a href="#contact" data-i18n="footer-form">Formulaire de contact</a>
+    </div>
+    <div class="footer-links">
+      <strong data-i18n="footer-zone">Zone</strong>
+      <span>Genève · Vaud</span>
+      <span data-i18n="footer-zone-2">France voisine</span>
+      <span data-i18n="footer-zone-3">Support à distance</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      © 2004-2026 <a href="RC-eric-miermon-informatique.pdf" target="_blank" title="Registre du Commerce">Eric Miermon Informatique</a> — abcinfo.ch &nbsp;·&nbsp;
+      <a href="mailto:contact@abcinfo.ch">contact@abcinfo.ch</a> &nbsp;·&nbsp;
+      Carouge, Genève &nbsp;·&nbsp;
+      <a href="#" title="Ancien site abcinfo.ch" data-i18n="ancien-site">Ancien site</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="js/main.js?v=13"></script>
+<script src="js/i18n.js?v=6"></script>
+<script>setLang(currentLang);</script>
+</body>
+</html>

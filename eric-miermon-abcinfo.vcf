@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Eric Miermon
+N:Miermon;Eric;;;
+ORG:AbcInfo
+TITLE:Ingénieur diplômé EPITA Paris
+TEL;TYPE=WORK,VOICE:+41223205600
+EMAIL;TYPE=WORK:eric@abcinfo.ch
+URL:https://www.abcinfo.ch
+ADR;TYPE=WORK:;;Carouge;Genève;;CH
+NOTE:Support & Maintenance · Développement & Applications · Genève
+END:VCARD
