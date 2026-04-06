@@ -54,8 +54,9 @@ if ($societe) $body_eric .= "Société   : $societe\n";
 $body_eric .= "Sujet     : $sujet\n";
 $body_eric .= "Langue    : " . strtoupper($lang) . "\n\n";
 $body_eric .= "Message :\n$message\n";
+$body_eric .= "\n— contact@abcinfo.ch\n";
 
-$hdrs_eric  = "From: noreply@abcinfo.ch\r\n";
+$hdrs_eric  = "From: contact@abcinfo.ch\r\n";
 $hdrs_eric .= "Reply-To: $email\r\n";
 $hdrs_eric .= $headers_base;
 
@@ -94,8 +95,8 @@ if ($lang === 'en') {
     $body_confirm .= "https://www.abcinfo.ch\n";
 }
 
-$hdrs_confirm  = "From: =?UTF-8?B?" . base64_encode('Eric Miermon — AbcInfo') . "?= <eric@abcinfo.ch>\r\n";
-$hdrs_confirm .= "Reply-To: eric@abcinfo.ch\r\n";
+$hdrs_confirm  = "From: =?UTF-8?B?" . base64_encode('Eric Miermon — AbcInfo') . "?= <contact@abcinfo.ch>\r\n";
+$hdrs_confirm .= "Reply-To: contact@abcinfo.ch\r\n";
 $hdrs_confirm .= $headers_base;
 
 mail($email, $subj_confirm, $body_confirm, $hdrs_confirm);
