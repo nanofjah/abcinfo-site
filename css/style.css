@@ -1073,6 +1073,10 @@ body.theme-80 .ap-item div {
   font-weight: 600; font-size: 0.95rem;
   font-family: var(--font-mono);
 }
+body.theme-80 .form-success {
+  background: rgba(0,255,70,0.08); color: #00ff46;
+  border-color: rgba(0,255,70,0.35);
+}
 
 
 /* ══════════════════════════════════════════════════════
