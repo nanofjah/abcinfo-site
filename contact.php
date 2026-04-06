@@ -7,6 +7,12 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
+// ── Honeypot anti-spam (champ invisible rempli = bot)
+if (!empty($_POST['website'])) {
+    echo json_encode(['ok' => true]); // silencieux pour ne pas alerter le bot
+    exit;
+}
+
 // Récupération et nettoyage des champs
 $prenom  = trim(strip_tags($_POST['prenom']  ?? ''));
 $nom     = trim(strip_tags($_POST['nom']     ?? ''));
@@ -62,7 +68,7 @@ if ($lang === 'en') {
     $subj_confirm = '=?UTF-8?B?' . base64_encode('Thank you for your message — AbcInfo') . '?=';
     $body_confirm  = "Hello $prenom,\n\n";
     $body_confirm .= "Thank you for contacting AbcInfo. I have received your message and will get back to you as soon as possible, usually within 24 hours on business days.\n\n";
-    $body_confirm .= "Here is a summary of your request:\n";
+    $body_confirm .= "Summary of your request:\n";
     $body_confirm .= "────────────────────────────────\n";
     $body_confirm .= "Subject : $sujet\n";
     $body_confirm .= "Message : $message\n";
@@ -70,8 +76,8 @@ if ($lang === 'en') {
     $body_confirm .= "Best regards,\n";
     $body_confirm .= "Eric Miermon\n";
     $body_confirm .= "AbcInfo — IT Services, Geneva\n";
-    $body_confirm .= "Phone : +41 22 320 56 00\n";
-    $body_confirm .= "Web   : https://www.abcinfo.ch\n";
+    $body_confirm .= "+41 22 320 56 00\n";
+    $body_confirm .= "https://www.abcinfo.ch\n";
 } else {
     $subj_confirm = '=?UTF-8?B?' . base64_encode('Merci pour votre message — AbcInfo') . '?=';
     $body_confirm  = "Bonjour $prenom,\n\n";
@@ -84,8 +90,8 @@ if ($lang === 'en') {
     $body_confirm .= "Cordialement,\n";
     $body_confirm .= "Eric Miermon\n";
     $body_confirm .= "AbcInfo — Service en informatique, Genève\n";
-    $body_confirm .= "Tél. : +41 22 320 56 00\n";
-    $body_confirm .= "Web  : https://www.abcinfo.ch\n";
+    $body_confirm .= "+41 22 320 56 00\n";
+    $body_confirm .= "https://www.abcinfo.ch\n";
 }
 
 $hdrs_confirm  = "From: =?UTF-8?B?" . base64_encode('Eric Miermon — AbcInfo') . "?= <eric@abcinfo.ch>\r\n";
