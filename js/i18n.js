@@ -317,6 +317,8 @@ function setLang(lang) {
     btnFr.style.cssText = lang === 'fr' ? active : inactive;
     btnEn.style.cssText = lang === 'en' ? active : inactive;
   }
+  const formLang = document.getElementById('formLang');
+  if (formLang) formLang.value = lang;
 }
 
 function restartTypewriter(lines) {
