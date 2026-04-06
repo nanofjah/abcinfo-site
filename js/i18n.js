@@ -279,7 +279,8 @@ const translations = {
   }
 };
 
-let currentLang = localStorage.getItem('abcinfo-lang') || 'fr';
+const _browserLang = (navigator.language || navigator.userLanguage || 'fr').toLowerCase().startsWith('en') ? 'en' : 'fr';
+let currentLang = localStorage.getItem('abcinfo-lang') || _browserLang;
 
 function setLang(lang) {
   currentLang = lang;
