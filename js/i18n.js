@@ -98,7 +98,7 @@ const translations = {
     'ci-tel':         '# téléphone',
     'ci-email':       '# e-mail',
     'ci-dispo':       '# disponibilité',
-    'ci-dispo-1':     'Lun–Ven 8h–18h',
+    'ci-dispo-1':     'Lun–Ven 9h–19h',
     'ci-dispo-2':     'Urgences sur arrangement',
     'ci-zone':        '# zone d\'intervention',
     'ci-zone-1':      'Genève · Vaud · France voisine',
@@ -110,6 +110,7 @@ const translations = {
     'form-nom':       'Nom *',
     'form-nom-ph':    'Dupont',
     'form-email-lbl': 'E-mail *',
+    'form-email-ph':  'jean.dupont@example.com',
     'form-tel-lbl':   'Téléphone',
     'form-tel-ph':    '+41 79 000 00 00',
     'form-sujet':     'Sujet *',
@@ -128,7 +129,7 @@ const translations = {
     'vcard-btn':      'Ajouter au carnet d\'adresses',
 
     /* Footer */
-    'footer-desc':    '<em>AbcInfo</em> — service en informatique<br>conseil, support et développement',
+    'footer-desc':    '<em>AbcInfo</em> . Service en informatique<br>Conseil, support, maintenance et développement.',
     'footer-svc':     'Services',
     'footer-svc-2':   'Développement Web',
     'footer-svc-3':   'Applications Mobiles',
@@ -236,7 +237,7 @@ const translations = {
     'ci-tel':         '# phone',
     'ci-email':       '# e-mail',
     'ci-dispo':       '# availability',
-    'ci-dispo-1':     'Mon–Fri 8am–6pm',
+    'ci-dispo-1':     'Mon–Fri 9am–7pm',
     'ci-dispo-2':     'Emergencies by arrangement',
     'ci-zone':        '# service area',
     'ci-zone-1':      'Geneva · Vaud · Neighboring France',
@@ -248,6 +249,7 @@ const translations = {
     'form-nom':       'Last name *',
     'form-nom-ph':    'Smith',
     'form-email-lbl': 'E-mail *',
+    'form-email-ph':  'john.smith@example.com',
     'form-tel-lbl':   'Phone',
     'form-tel-ph':    '+41 79 000 00 00',
     'form-sujet':     'Subject *',
@@ -266,7 +268,7 @@ const translations = {
     'vcard-btn':      'Add to contacts',
 
     /* Footer */
-    'footer-desc':    '<em>AbcInfo</em> — IT services<br>consulting, support &amp; development',
+    'footer-desc':    '<em>AbcInfo</em> . IT Services<br>Consulting, support, maintenance &amp; development.',
     'footer-svc':     'Services',
     'footer-svc-2':   'Web Development',
     'footer-svc-3':   'Mobile Applications',
