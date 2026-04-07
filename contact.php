@@ -76,7 +76,7 @@ if ($lang === 'en') {
     $body_confirm .= "────────────────────────────────\n\n";
     $body_confirm .= "Best regards,\n";
     $body_confirm .= "Eric Miermon\n";
-    $body_confirm .= "AbcInfo — IT Services, Geneva\n";
+    $body_confirm .= "AbcInfo . IT Services, Geneva\n";
     $body_confirm .= "+41 22 320 56 00\n";
     $body_confirm .= "https://www.abcinfo.ch\n";
 } else {
