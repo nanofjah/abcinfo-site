@@ -45,9 +45,18 @@ function closeMobile() {
 function positionThemeBar() {
   const contact = document.querySelector('.nav-contact');
   const bar = document.getElementById('themeBar');
-  if (!contact || !bar) return;
-  const r = contact.getBoundingClientRect();
-  bar.style.right = (document.documentElement.clientWidth - r.right) + 'px';
+  if (!bar) return;
+  /* Mobile : nav-contact est caché → centrer la barre */
+  if (!contact || contact.offsetParent === null) {
+    bar.style.right = 'auto';
+    bar.style.left = '50%';
+    bar.style.transform = 'translateX(-50%)';
+  } else {
+    const r = contact.getBoundingClientRect();
+    bar.style.right = (document.documentElement.clientWidth - r.right) + 'px';
+    bar.style.left = 'auto';
+    bar.style.transform = 'none';
+  }
 }
 positionThemeBar();
 window.addEventListener('resize', positionThemeBar);

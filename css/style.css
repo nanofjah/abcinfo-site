@@ -672,7 +672,7 @@ body.theme-80 .ap-item div {
   font-family: var(--font-mono);
   font-size: 1.3rem; font-weight: 400;
   line-height: 1.1; margin-bottom: 12px;
-  white-space: nowrap;
+  white-space: normal;
   letter-spacing: 0.04em;
 }
 .axe-card p {
