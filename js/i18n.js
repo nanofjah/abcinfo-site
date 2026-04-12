@@ -3,6 +3,9 @@
 ══════════════════════════════════════════════════════ */
 const translations = {
   fr: {
+    /* Page title */
+    'page-title': 'AbcInfo Informatique — Conseil, support, maintenance et développement',
+
     /* Logo */
     'logo-tagline': 'Service en informatique',
 
@@ -142,6 +145,9 @@ const translations = {
   },
 
   en: {
+    /* Page title */
+    'page-title': 'AbcInfo IT — Consulting, support, maintenance & development',
+
     /* Logo */
     'logo-tagline': 'IT Services',
 
@@ -289,6 +295,9 @@ function setLang(lang) {
   localStorage.setItem('abcinfo-lang', lang);
 
   const t = translations[lang];
+
+  // Page title
+  if (t['page-title']) document.title = t['page-title'];
 
   // Apply all data-i18n elements
   document.querySelectorAll('[data-i18n]').forEach(el => {
